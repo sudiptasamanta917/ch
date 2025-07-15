@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.first_box{
+    padding: 50px;
+   
+    width:100%;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    
+}
+.second_box{
+    height: 500px;
+    width:80% ;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.second_left{
+    height: 500px;
+    width: 45%;
+    background-color: #262626;
+    padding: 30px;
+    color: white;
+    
+}
+.second_right{
+    height: 500px;
+    width: 45%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* .second_right{
+    height: 500px;
+    width: 50%;
+    background-color: pink;
+} */
+ .second_right_upper{
+    width: 100%;
+    height: 45%;
+    background-color: blue
+ }
+ 
+ .second_right_lower{
+    width: 100%;
+    height: 45%;
+    background-color: pink
+ }
+.name{
+    width: 100%;
+    height: 40px;
+    background-color:rgb(82, 82, 82); 
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 8px
+}
+.get_text{
+    margin-bottom: 30px;
+}
+.email_wraper{
+    height: 80px;
+    width: 100%;
+    margin-top: 16px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.email_wraper_left{
+    width: 45%;
+    height: 100%;
+    
+}
+.email_wraper_right{
+    width: 45%;
+    height:100%;
+    
+}
