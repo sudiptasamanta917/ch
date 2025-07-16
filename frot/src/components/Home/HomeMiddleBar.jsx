@@ -22,7 +22,7 @@ function HomeMiddleBar() {
                       <LazyLoadImage
                           src={chessBoard}
                           alt=""
-                          className="md:w-[600px] aspect-1/1 h-auto"
+                          className="md:w-[600px] w-[500px] aspect-1/1 h-auto"
                           effect="blur"
                       />
                   </div>

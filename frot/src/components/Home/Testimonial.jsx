@@ -49,11 +49,11 @@ const Testimonial = () => {
     // console.log(data?.data?.ratings, "hhhhhhhhhhhhhhhkkkkkkkkkkk");
 
     return (
-        <section className="rounded-md py-5 my-5 bg-[#262522]">
+        <section className="rounded py-5 my-5 bg-[#262522]">
             <div className="">
                 <div className="">
                     <div className="max-sm:pt-0 max-sm:text-center px-3 ">
-                        <h2 className="text-2xl font-sans font-semibold tracking-tight text-[#fade47] sm:text-3xl">
+                        <h2 className="text-2xl text-center font-sans font-semibold tracking-tight text-[#fade47] sm:text-3xl">
                             Player Feedback
                         </h2>
 
@@ -135,7 +135,7 @@ const Testimonial = () => {
                                 {data.data.ratings.map((item, index) => (
                                     <blockquote
                                         key={index}
-                                        className="rounded-lg bg-gray-50 mx-2 block shadow-sm p-2  overflow-hidden"
+                                        className="rounded-lg bg-[#302e2b] mx-2 block shadow-sm p-2  overflow-hidden"
                                     >
                                         <div className="flex items-center gap-2">
                                             <div className="w-12 h-12">

@@ -36,7 +36,7 @@ function Pricing() {
 
     return (
         <div className="">
-            <section className="h-full rounded-md py-5 px-2 my-5 bg-[#262522] pr-2">
+            <section className="h-full rounded py-5 px-2 my-5 bg-[#262522] pr-2">
                 <h1 className="text-center font-bold capitalize text-green-600 text-3xl ">
                     Choose your Plans
                 </h1>

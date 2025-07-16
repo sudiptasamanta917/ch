@@ -551,7 +551,7 @@ function App() {
                     {/* <ToastContainer /> */}
                 </div>
                 <div className={`relative transition-all duration-300`}>
-                    <div className="absolute w-full rounded-t-xl overflow-hidden">
+                    <div className="absolute w-full rounded-t-md overflow-hidden">
                         <Suspense fallback={<div>Loading...</div>}>
                             <Footer />
                         </Suspense>

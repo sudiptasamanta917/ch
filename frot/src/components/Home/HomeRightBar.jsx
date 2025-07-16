@@ -113,19 +113,19 @@ function HomeRightBar() {
   return (
       <div className="">
           <LoadingBar color="#F11946" ref={loadingBar} />
-          <div className="flex flex-col items-center font-bold pt-10">
-              <div className="text-center w-80 text-4xl mb-5 text-[#fade47]">
+          <div className="flex flex-col items-center font-bold lg:pt-10">
+              <div className="text-center lg:w-80 w-60 lg:text-4xl text-2xl lg:mb-5 mb-3 text-[#fade47]">
                   Play Chess
               </div>
               <div className="">
                   <div className="flex justify-center">
                       <button
                           onClick={() => setShowOptions(!showOptions)}
-                          className={`h-16 w-80 mb-2 rounded-2xl ${
+                          className={`lg:h-16 h-12 lg:w-80 w-60 mb-2 rounded-2xl ${
                               showOptions ? "bg-gray-500" : "bg-[#6ca732]"
                           } hover:bg-[#a3d160] shadow-md shadow-green-400/40 hover:shadow-green-500/50 hover:ring-inset px-4 py-2 transition-all duration-300`}
                       >
-                          <div className="flex gap-2 h-full items-center justify-center text-[25px]">
+                          <div className="flex gap-2 h-full items-center justify-center lg:text-[25px] text-[15px]">
                               <LazyLoadImage
                                   src={playingLogo}
                                   alt=""
@@ -151,9 +151,9 @@ function HomeRightBar() {
                               <div className="flex justify-center">
                                   <button
                                       onClick={hendelOnlineGame}
-                                      className="h-14 w-80 mb-4 rounded-md bg-[#6ca732] hover:bg-[#a3d160] px-4 py-3 transition-all duration-300"
+                                      className="h-14 lg:w-80 w-60 mb-4 rounded-md bg-[#6ca732] hover:bg-[#a3d160] px-4 py-3 transition-all duration-300"
                                   >
-                                      <div className="flex gap-2 h-full items-center justify-center text-[25px] text-white">
+                                      <div className="flex gap-2 h-full items-center justify-center lg:text-[25px] text-[15px] text-white">
                                           ▶ Play Now
                                       </div>
                                   </button>
@@ -165,7 +165,7 @@ function HomeRightBar() {
                   <div className="flex justify-center">
                       <Link
                           to="/chess10by10"
-                          className="h-16 w-80 mb-6 rounded-2xl bg-[#4d4b49] hover:bg-[#6F6D6B] shadow-md 
+                          className="lg:h-16 h-12 lg:w-80 w-60 mb-6 rounded-2xl bg-[#4d4b49] hover:bg-[#6F6D6B] shadow-md 
                           shadow-gray-600/60
                           hover:shadow-md 
                           hover:shadow-gray-500/50         
@@ -173,7 +173,7 @@ function HomeRightBar() {
                           px-4 py-3
                           transition-all duration-300"
                       >
-                          <div className="flex gap-2 h-full items-center justify-center text-[25px]">
+                          <div className="flex gap-2 h-full items-center justify-center lg:text-[25px] text-[15px]">
                               <div>
                                   <FaEarthAfrica className="text-white w-7 h-7" />
                               </div>
@@ -185,7 +185,7 @@ function HomeRightBar() {
                   </div>
                   <div className="flex justify-center">
                       <div
-                          className="h-16 w-80 mb-6 rounded-2xl bg-[#6ca732] hover:bg-[#a3d160] cursor-pointer shadow-md 
+                          className="lg:h-16 h-12 lg:w-80 w-60 mb-6 rounded-2xl bg-[#6ca732] hover:bg-[#a3d160] cursor-pointer shadow-md 
                           shadow-green-400/40
                           hover:shadow-md 
                           hover:shadow-green-500/50        
@@ -195,7 +195,7 @@ function HomeRightBar() {
                       >
                           <div
                               onClick={openModal}
-                              className="flex gap-2 h-full items-center justify-center text-[25px]"
+                              className="flex gap-2 h-full items-center justify-center lg:text-[25px] text-[15px]"
                           >
                               <div className="text-3xl">
                                   <FaHandshake className="text-white" />
@@ -214,7 +214,7 @@ function HomeRightBar() {
                   <div className="flex justify-center">
                       <Link
                           to="/trainer"
-                          className="h-16 w-80 mb-6 rounded-2xl bg-[#4d4b49] hover:bg-[#6F6D6B] shadow-md 
+                          className="lg:h-16 h-12 lg:w-80 w-60 lg:mb-4 mb-3 rounded-2xl bg-[#4d4b49] hover:bg-[#6F6D6B] shadow-md 
                           shadow-gray-600/60
                           hover:shadow-md 
                           hover:shadow-gray-500/50        
@@ -222,7 +222,7 @@ function HomeRightBar() {
                           px-4 py-3
                           transition-all duration-300"
                       >
-                          <div className="flex gap-1 h-full items-center justify-center text-[25px]">
+                          <div className="flex gap-1 h-full items-center justify-center lg:text-[25px] text-[15px]">
                               <div className="ms-2">
                                   <LiaChalkboardTeacherSolid className="text-white text-3xl" />
                               </div>
@@ -234,8 +234,8 @@ function HomeRightBar() {
                   </div>
               </div>
           </div>
-          <div className="mx-3 mt-4">
-              <h2 className="text-xl text-center font-semibold text-[#fade47]">
+          <div className="mx-3 mt-2">
+              <h2 className="lg:text-xl text-md text-center font-semibold text-[#fade47]">
                   Active Players (
                   {`${
                       itemsdata.length == 0
@@ -244,7 +244,7 @@ function HomeRightBar() {
                   }`}
                   )
               </h2>
-              <div className="w-full mt-6 rounded-md h-32 overflow-y-auto">
+              <div className="w-full lg:mt-6 mt-3 rounded-md lg:h-32 h-20 overflow-y-auto">
                   {itemsdata &&
                       itemsdata.map((item, index) => (
                           <div

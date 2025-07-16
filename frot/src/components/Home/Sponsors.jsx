@@ -48,14 +48,14 @@ function Sponsors() {
 
   return (
       <>
-          <div className="my-2 py-5 bg-[#262522] px-2 relative rounded-md">
+          <div className="my-2 py-5 bg-[#262522] px-2 relative rounded">
               <div className="">
                   <div className="flex flex-col justify-center">
                       <div className="text-center">
-                          <h2 className="font-semibold text-[#fade47] text-3xl">
+                          <h2 className="font-semibold text-[#fade47] md:text-3xl text-2xl">
                               Our Sponsors
                           </h2>
-                          <p className="mx-auto max-w-lg text-lg font-semibold my-4 text-[#16a34a]">
+                          <p className="mx-auto max-w-lg md:text-lg text-md font-semibold my-4 text-[#16a34a]">
                               We are thankful to each and every company
                               sponsored our plugin which helped us to continue
                               working on it.

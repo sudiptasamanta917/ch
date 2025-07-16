@@ -296,7 +296,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
             <div
                 className={`w-[80vw] fixed top-5 left-1/2 transform -translate-x-1/2 z-50 rounded-xl`}
             >
-                <nav className="shadow-md w-full h-16 gap-1 flex justify-between px-3 bg-[#96fff649] text-white backdrop-blur-md rounded-xl">
+                <nav className="shadow-md w-full sm:h-16 h-12 gap-1 flex justify-between px-3 bg-[#96fff649] text-white backdrop-blur-md rounded-xl">
                     <div
                         onClick={() => {
                             setMenu(false);
@@ -305,9 +305,9 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                         className="flex items-center relative gap-3"
                     >
                         <Link to="/" className="py-1 flex items-center">
-                            <img src={logo} alt="" className="w-24 h-24" />
+                            <img src={logo} alt="" className="sm:w-24 w-20 sm:h-24 h-20" />
                         </Link>
-                        <div className="text-3xl text-yellow-300 font-bold">
+                        <div className="sm:text-3xl text-xl text-yellow-300 font-bold">
                             Dynamo Chess
                         </div>
                     </div>
@@ -316,9 +316,9 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                         <div className="relative pt-2 pr-2 lg:hidden">
                             <Link to="/profile">
                                 {" "}
-                                <FaBell className="w-5 h-5 text-white" />
+                                <FaBell className="w-6 h-6 text-amber-950" />
                             </Link>
-                            <div className="absolute top-1 left-3 right-0 inline-flex items-center justify-center text-sm font-bold leading-none text-white rounded-full">
+                            <div className="absolute top-[1px] left-3 right-0 inline-flex items-center justify-center text-sm bg-red-500 p-[3px] font-bold leading-none text-white rounded-full">
                                 {queryNOTIFICATION?.data?.data?.notifications
                                     ?.length || 0}
                             </div>
@@ -328,12 +328,12 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                             onClick={() => setMenu(!menu)}
                         >
                             <IoMdMenu
-                                className={`text-gray-200 text-xl ${
+                                className={`text-amber-950 text-3xl font-bold ${
                                     menu && "hidden"
                                 }`}
                             />
                             <FaXmark
-                                className={`text-gray-200 text-xl ${
+                                className={`text-amber-950 text-2xl font-bold ${
                                     !menu && "hidden"
                                 }`}
                             />
@@ -344,7 +344,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                     <div className="flex items-center bg-[#b2c8ba9a] shadow-2xl rounded-3xl  overflow-hidden h-10">
                                         <input
                                             type="text"
-                                            className="focus:outline-none h-10 w-44 bg-transparent border-none text-amber-950 placeholder:text-green-800 placeholder:font-semibold pl-4 pr-2"
+                                            className="focus:outline-none h-10 w-44 bg-transparent border border-none text-amber-950 placeholder:text-green-800 placeholder:font-semibold pl-4 pr-2"
                                             placeholder="Search"
                                             value={search}
                                             onChange={(e) =>
@@ -461,7 +461,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
             <div
                 className={`fixed top-28 left-0 h-[60vh] ${
                     isSidebarOpen ? "w-40" : "w-14"
-                } transition-all duration-200 ease-in-out bg-[#262522] backdrop-blur-md h-screen rounded-r-xl pt-5`}
+                } transition-all duration-200 ease-in-out bg-[#262522] backdrop-blur-md h-screen rounded-r-md pt-5`}
             >
                 {/* Toggle Button */}
                 <div className="flex justify-center mb-5 mr-1">
@@ -488,7 +488,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <FaHome className="text-[30px] text-[#4E342E]" />
+                            <FaHome className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Home"}
                         </Link>
                     </li>
@@ -500,7 +500,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <SiChessdotcom className="text-[28px] text-[#4E342E]" />
+                            <SiChessdotcom className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Play"}
                         </a>
                         <ul className="absolute z-50 left-0 w-40 px-2 hidden bg-gray-600 text-white rounded-md  group-hover/item:block capitalize   ">
@@ -531,7 +531,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <IoExtensionPuzzleSharp className="text-[30px] text-[#4E342E]" />
+                            <IoExtensionPuzzleSharp className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "puzzles"}
                         </a>
                         <ul className="absolute left-0 z-50 w-40 px-2 hidden bg-gray-600 rounded-md text-white  group-hover/item:block capitalize  ">
@@ -604,7 +604,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <RiUserCommunityFill className="text-[28px] text-[#4E342E]" />
+                            <RiUserCommunityFill className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Zone"}
                         </a>
                         <ul className="absolute z-50 left-0 w-40 px-2 hidden bg-gray-600 text-white rounded-md group-hover/item:block capitalize  ">
@@ -654,7 +654,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <FaTrophy className="text-[30px] text-[#4E342E]" />
+                            <FaTrophy className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Events"}
                         </Link>
                         <ul className="absolute z-50 lg:left-0 w-40 px-2 pt-2 hidden bg-gray-600 text-white rounded-md group-hover/item:block capitalize ">
@@ -677,7 +677,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <FaBookOpen className="text-[30px] text-[#4E342E]" />
+                            <FaBookOpen className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Rules"}
                         </Link>
                     </li>
@@ -690,7 +690,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <FaUserFriends className="text-[30px] text-[#4E342E]" />
+                            <FaUserFriends className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "About Us"}
                         </Link>
                     </li>
@@ -703,7 +703,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
-                            <IoGameController className="text-[30px] text-[#4E342E]" />
+                            <IoGameController className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Games"}
                         </Link>
                     </li>
