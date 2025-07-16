@@ -275,7 +275,6 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
         const protocol = window.location.protocol;
         const host = window.location.host;
         const uniqueIdurl = `${protocol}//${host}/multiplayer/randomMultiplayer/600`;
-        // window.open(uniqueIdurl, '_blank');
         window.location.href = uniqueIdurl;
 
         setMenu(false);
@@ -305,7 +304,11 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                         className="flex items-center relative gap-3"
                     >
                         <Link to="/" className="py-1 flex items-center">
-                            <img src={logo} alt="" className="sm:w-24 w-20 sm:h-24 h-20" />
+                            <img
+                                src={logo}
+                                alt=""
+                                className="sm:w-24 w-20 sm:h-24 h-20"
+                            />
                         </Link>
                         <div className="sm:text-3xl text-xl text-yellow-300 font-bold">
                             Dynamo Chess
@@ -466,6 +469,7 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                 {/* Toggle Button */}
                 <div className="flex justify-center mb-5 mr-1">
                     <button
+                        type="button"
                         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                         className="text-[#4E342E] p-[0px] rounded-full bg-[#262522] hover:bg-gray-600"
                     >
@@ -494,15 +498,14 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                     </li>
                     <li className="relative group/item hover:bg-gray-600 hover:text-white mb-4 py-1 px-2 uppercase hover:">
                         {" "}
-                        <a
-                            href=""
+                        <span
                             className={`flex items-center gap-3 transition-all duration-500${
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
                             <SiChessdotcom className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Play"}
-                        </a>
+                        </span>
                         <ul className="absolute z-50 left-0 w-40 px-2 hidden bg-gray-600 text-white rounded-md  group-hover/item:block capitalize   ">
                             <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
                                 <Link onClick={hendelOnlineGame}>
@@ -525,33 +528,26 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                     </li>
                     <li className="relative group/item hover:bg-gray-600 hover:text-white mb-4 py-1 px-2 uppercase hover:">
                         {" "}
-                        <a
-                            href=""
+                        <span
                             className={`flex items-center gap-3 transition-all duration-500${
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
                             <IoExtensionPuzzleSharp className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "puzzles"}
-                        </a>
+                        </span>
                         <ul className="absolute left-0 z-50 w-40 px-2 hidden bg-gray-600 rounded-md text-white  group-hover/item:block capitalize  ">
                             <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
                                 <Link to={"/puzzle"}>puzzle rush</Link>
                             </li>
                             <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
-                                <a href="https://dynamochess.in/chessLearn/">
-                                    puzzle battle
-                                </a>
+                                <Link to="/">puzzle battle</Link>
                             </li>
                             <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
-                                <a href="https://dynamochess.in/chessLearn/">
-                                    puzzle storm
-                                </a>
+                                <Link to="/">puzzle storm</Link>
                             </li>
                             <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
-                                <a href="https://dynamochess.in/chessLearn/">
-                                    puzzle racer
-                                </a>
+                                <Link to="/">puzzle racer</Link>
                             </li>
                         </ul>
                     </li>
@@ -598,20 +594,17 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
            </li> */}
                     <li className="relative   group/item hover:bg-gray-600 hover:text-white mb-4 py-1 px-2 uppercase">
                         {" "}
-                        <a
-                            href=""
+                        <span
                             className={`flex items-center gap-3 transition-all duration-500${
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
                             <RiUserCommunityFill className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Zone"}
-                        </a>
+                        </span>
                         <ul className="absolute z-50 left-0 w-40 px-2 hidden bg-gray-600 text-white rounded-md group-hover/item:block capitalize  ">
                             <li className="hover:bg-gray-500 text-nowrap p-1 my-2 ">
-                                <Link to={"/player"} href>
-                                    Players
-                                </Link>
+                                <Link to={"/player"}>Players</Link>
                             </li>
                             {/* <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
                                 <a href="">Teams</a>
@@ -620,9 +613,9 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
                <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
                  <a href="">form</a>
                </li> */}
-                            <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
-                                {/* <Link to={'/blog'} href="">Blog</Link> */}
-                            </li>
+                            {/* <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
+                                <Link to={'/blog'} href="">Blog</Link>
+                            </li> */}
                         </ul>
                     </li>
                     {/* <li className="relative  hover: group/item  hover:bg-gray-600 hover:text-green-400 py-1 px-2 uppercase">
@@ -648,15 +641,14 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
            </li> */}
                     <li className="relative  hover: group/item  hover:bg-gray-600 hover:text-white mb-4 py-1 px-2 uppercase">
                         {" "}
-                        <Link
-                            to=""
+                        <span
                             className={`flex items-center gap-3 transition-all duration-500${
                                 isSidebarOpen ? "opacity-100" : "opacity-0"
                             }`}
                         >
                             <FaTrophy className="md:text-[30px] text-[20px] text-[#4E342E]" />
                             {isSidebarOpen && "Events"}
-                        </Link>
+                        </span>
                         <ul className="absolute z-50 lg:left-0 w-40 px-2 pt-2 hidden bg-gray-600 text-white rounded-md group-hover/item:block capitalize ">
                             <li className="hover:bg-gray-500 text-nowrap p-1 my-2">
                                 <Link to="/TournamentDetail">
